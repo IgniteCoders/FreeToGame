@@ -16,40 +16,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="260" estimatedRowHeight="260" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-uq-UJa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-uq-UJa">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Game Cell" rowHeight="260" id="acC-Zl-0oV" customClass="GameViewCell" customModule="FreeToGame" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="260"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Game Cell" id="acC-Zl-0oV" customClass="GameViewCell" customModule="FreeToGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="332"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="acC-Zl-0oV" id="aV5-JX-W65">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="260"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5BJ-MQ-Du8" userLabel="Card View">
-                                                    <rect key="frame" x="20" y="15" width="353" height="230"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5BJ-MQ-Du8" userLabel="Card View">
+                                                    <rect key="frame" x="20" y="15" width="353" height="302"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAv-yU-2LE">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YAv-yU-2LE">
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="180"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="180" id="09d-Qy-ZWv"/>
+                                                            </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rw-v8-7Gg">
-                                                            <rect key="frame" x="8" y="188" width="337" height="35"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rw-v8-7Gg">
+                                                            <rect key="frame" x="8" y="188" width="337" height="28.666666666666657"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDB-O2-Hcl">
+                                                            <rect key="frame" x="8" y="230.66666666666666" width="295" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wP-1e-6vB">
+                                                            <rect key="frame" x="8" y="259.66666666666669" width="337" height="20.333333333333314"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mf8-vQ-Zyz">
+                                                            <rect key="frame" x="311" y="223.66666666666666" width="34" height="33.999999999999972"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="34" id="BcP-Oy-NsM"/>
+                                                                <constraint firstAttribute="width" constant="34" id="O8u-BD-oKL"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="6Rw-v8-7Gg" firstAttribute="top" secondItem="YAv-yU-2LE" secondAttribute="bottom" constant="8" symbolic="YES" id="6kr-21-C83"/>
+                                                        <constraint firstItem="HDB-O2-Hcl" firstAttribute="top" secondItem="6Rw-v8-7Gg" secondAttribute="bottom" constant="14" id="87j-K5-gw3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Mf8-vQ-Zyz" secondAttribute="trailing" constant="8" id="8Kw-T6-mha"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6Rw-v8-7Gg" secondAttribute="trailing" constant="8" id="GV4-N9-Aum"/>
+                                                        <constraint firstItem="HDB-O2-Hcl" firstAttribute="leading" secondItem="5BJ-MQ-Du8" secondAttribute="leading" constant="8" id="HFf-Ag-vyk"/>
+                                                        <constraint firstItem="YAv-yU-2LE" firstAttribute="leading" secondItem="5BJ-MQ-Du8" secondAttribute="leading" id="OMX-d5-ngp"/>
+                                                        <constraint firstItem="6Rw-v8-7Gg" firstAttribute="leading" secondItem="5BJ-MQ-Du8" secondAttribute="leading" constant="8" id="RnU-4t-pXG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4wP-1e-6vB" secondAttribute="trailing" constant="8" id="SMH-cp-aPG"/>
+                                                        <constraint firstItem="Mf8-vQ-Zyz" firstAttribute="top" secondItem="6Rw-v8-7Gg" secondAttribute="bottom" constant="7" id="aJC-wF-1gJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4wP-1e-6vB" secondAttribute="bottom" constant="22" id="bT8-PD-78U"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YAv-yU-2LE" secondAttribute="trailing" id="cyh-zK-hKm"/>
+                                                        <constraint firstItem="Mf8-vQ-Zyz" firstAttribute="leading" secondItem="HDB-O2-Hcl" secondAttribute="trailing" constant="8" symbolic="YES" id="eUC-Uh-Ayc"/>
+                                                        <constraint firstItem="4wP-1e-6vB" firstAttribute="leading" secondItem="5BJ-MQ-Du8" secondAttribute="leading" constant="8" id="gVJ-1o-GzR"/>
+                                                        <constraint firstItem="4wP-1e-6vB" firstAttribute="top" secondItem="HDB-O2-Hcl" secondAttribute="bottom" constant="8" id="ipb-D8-QYo"/>
+                                                        <constraint firstItem="YAv-yU-2LE" firstAttribute="top" secondItem="5BJ-MQ-Du8" secondAttribute="top" id="wam-uC-QvG"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5BJ-MQ-Du8" firstAttribute="leading" secondItem="aV5-JX-W65" secondAttribute="leadingMargin" id="O0f-Zh-Wom"/>
+                                                <constraint firstItem="5BJ-MQ-Du8" firstAttribute="trailing" secondItem="aV5-JX-W65" secondAttribute="trailingMargin" id="o9D-Ll-9cb"/>
+                                                <constraint firstItem="5BJ-MQ-Du8" firstAttribute="bottom" secondItem="aV5-JX-W65" secondAttribute="bottomMargin" id="yPQ-oy-aez"/>
+                                                <constraint firstItem="5BJ-MQ-Du8" firstAttribute="top" secondItem="aV5-JX-W65" secondAttribute="topMargin" id="ytt-9c-8mk"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="cardView" destination="5BJ-MQ-Du8" id="QMo-mg-1iq"/>
+                                            <outlet property="genreLabel" destination="HDB-O2-Hcl" id="HjB-Pq-auU"/>
+                                            <outlet property="platformImageView" destination="Mf8-vQ-Zyz" id="b7b-J1-yUL"/>
+                                            <outlet property="shortDescriptionLabel" destination="4wP-1e-6vB" id="wvo-kE-6Tk"/>
                                             <outlet property="thumbnailImageView" destination="YAv-yU-2LE" id="4sT-vG-Ay9"/>
                                             <outlet property="titleLabel" destination="6Rw-v8-7Gg" id="TtC-cx-xDR"/>
                                             <segue destination="IB9-wO-Zbx" kind="show" id="Qn7-gn-gUT"/>

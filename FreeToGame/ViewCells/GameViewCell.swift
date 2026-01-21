@@ -12,6 +12,9 @@ class GameViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var shortDescriptionLabel: UILabel!
+    @IBOutlet weak var platformImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +30,14 @@ class GameViewCell: UITableViewCell {
     func configure(with game: Game) {
         titleLabel.text = game.title
         thumbnailImageView.loadFrom(url: game.thumbnail)
+        genreLabel.text = game.genre
+        shortDescriptionLabel.text = game.shortDescription
+        
+        platformImageView.image = if game.platform == "PC (Windows)" {
+            UIImage(systemName: "desktopcomputer")
+        } else {
+            UIImage(systemName: "safari")
+        }
         
         cardView.layer.cornerRadius = 32
         cardView.layer.masksToBounds = true
