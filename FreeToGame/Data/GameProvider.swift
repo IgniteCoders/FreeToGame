@@ -25,6 +25,7 @@ class GameProvider {
             return result
         } catch {
             print("Invalid data")
+            print("Error info: \(error)")
             return []
         }
     }
@@ -45,6 +46,7 @@ class GameProvider {
             return result
         } catch {
             print("Invalid data")
+            print("Error info: \(error)")
             return nil
         }
     }
