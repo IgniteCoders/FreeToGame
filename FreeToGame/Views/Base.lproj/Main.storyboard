@@ -81,16 +81,46 @@
             <objects>
                 <viewController id="IB9-wO-Zbx" customClass="DetailViewController" customModule="FreeToGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zOW-bn-9hU">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1299"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6m8-sh-ZGM">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1299"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TET-bQ-tOf" userLabel="Scroll Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="bCB-5D-gKx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TET-bQ-tOf" firstAttribute="trailing" secondItem="8r6-Ij-tmi" secondAttribute="trailing" id="55R-E0-VbL"/>
+                                    <constraint firstItem="TET-bQ-tOf" firstAttribute="bottom" secondItem="8r6-Ij-tmi" secondAttribute="bottom" id="ckg-Y5-Iub"/>
+                                    <constraint firstItem="TET-bQ-tOf" firstAttribute="top" secondItem="8r6-Ij-tmi" secondAttribute="top" id="pES-c8-9T0"/>
+                                    <constraint firstItem="TET-bQ-tOf" firstAttribute="width" secondItem="Q7c-nU-gIh" secondAttribute="width" id="td9-xn-bhv"/>
+                                    <constraint firstItem="TET-bQ-tOf" firstAttribute="leading" secondItem="8r6-Ij-tmi" secondAttribute="leading" id="wRm-3R-MOK"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="8r6-Ij-tmi"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Q7c-nU-gIh"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J2o-KX-0SS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6m8-sh-ZGM" secondAttribute="bottom" id="7aE-ly-iZc"/>
+                            <constraint firstItem="6m8-sh-ZGM" firstAttribute="leading" secondItem="J2o-KX-0SS" secondAttribute="leading" id="c3J-3h-5ds"/>
+                            <constraint firstItem="6m8-sh-ZGM" firstAttribute="top" secondItem="zOW-bn-9hU" secondAttribute="top" id="iYV-DS-EIc"/>
+                            <constraint firstItem="6m8-sh-ZGM" firstAttribute="trailing" secondItem="J2o-KX-0SS" secondAttribute="trailing" id="zxL-ar-tXV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y0n-x7-UFi"/>
+                    <size key="freeformSize" width="393" height="1299"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcw-OX-gzF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2037.4045801526718" y="130.98591549295776"/>
+            <point key="canvasLocation" x="2037.4045801526718" y="289.08450704225356"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SY1-m5-qE2">
@@ -116,7 +146,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
