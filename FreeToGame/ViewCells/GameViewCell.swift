@@ -33,11 +33,7 @@ class GameViewCell: UITableViewCell {
         genreLabel.text = game.genre
         shortDescriptionLabel.text = game.shortDescription
         
-        platformImageView.image = if game.platform == "PC (Windows)" {
-            UIImage(systemName: "desktopcomputer")
-        } else {
-            UIImage(systemName: "safari")
-        }
+        platformImageView.image = game.getPlatformImage()
         
         cardView.layer.cornerRadius = 32
         cardView.layer.masksToBounds = true

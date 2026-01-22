@@ -36,7 +36,7 @@
                                                                 <constraint firstAttribute="height" constant="180" id="09d-Qy-ZWv"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rw-v8-7Gg">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="6Rw-v8-7Gg">
                                                             <rect key="frame" x="8" y="188" width="337" height="28.666666666666657"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                             <nil key="textColor"/>
@@ -134,9 +134,54 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TET-bQ-tOf" userLabel="Scroll Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qum-fl-2e6">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="215"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="qmX-Os-4gS">
+                                                <rect key="frame" x="8" y="223" width="377" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHp-Aj-sr7">
+                                                <rect key="frame" x="8" y="260" width="335" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZW-4C-Q1e">
+                                                <rect key="frame" x="351" y="253" width="34" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOL-vU-hOl" userLabel="Divider View">
+                                                <rect key="frame" x="8" y="290" width="377" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3Y-ns-BZs">
+                                                <rect key="frame" x="8" y="326" width="377" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHM-o5-xbL">
+                                                <rect key="frame" x="8" y="298" width="119" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="L3Y-ns-BZs" secondAttribute="trailing" constant="8" id="4Ym-Sb-KFH"/>
+                                            <constraint firstItem="L3Y-ns-BZs" firstAttribute="top" secondItem="TET-bQ-tOf" secondAttribute="top" constant="326" id="Vmq-z1-x90"/>
                                             <constraint firstAttribute="height" constant="1000" id="bCB-5D-gKx"/>
+                                            <constraint firstItem="L3Y-ns-BZs" firstAttribute="leading" secondItem="TET-bQ-tOf" secondAttribute="leading" constant="8" id="ri8-mX-Xwx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -162,6 +207,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="y0n-x7-UFi"/>
                     <size key="freeformSize" width="393" height="1299"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="L3Y-ns-BZs" id="WCe-vf-soK"/>
+                        <outlet property="genreLabel" destination="PHp-Aj-sr7" id="3yq-s4-nef"/>
+                        <outlet property="platformImageView" destination="LZW-4C-Q1e" id="LU1-sF-DRB"/>
+                        <outlet property="thumbnailImageView" destination="qum-fl-2e6" id="ZP1-Pn-Gi7"/>
+                        <outlet property="titleLabel" destination="qmX-Os-4gS" id="LD8-fy-Bpv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcw-OX-gzF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,8 +224,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Ml-th-b1i" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xa3-0I-6eY">
-                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xa3-0I-6eY">
+                        <rect key="frame" x="0.0" y="118" width="393" height="106"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -187,11 +239,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

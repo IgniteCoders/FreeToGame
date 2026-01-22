@@ -9,6 +9,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var platformImageView: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    
     var game: Game!
 
     override func viewDidLoad() {
@@ -16,6 +23,23 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationItem.title = game.title
+        
+        Task {
+            game = await GameProvider.getGameById(id: game.id)
+            
+            DispatchQueue.main.async {
+                self.loadData()
+            }
+        }
+    }
+    
+    func loadData() {
+        titleLabel.text = game.title
+        thumbnailImageView.loadFrom(url: game.thumbnail)
+        genreLabel.text = game.genre
+        descriptionLabel.text = game.description
+        
+        platformImageView.image = game.getPlatformImage()
     }
     
 

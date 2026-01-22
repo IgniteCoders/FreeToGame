@@ -24,6 +24,14 @@ struct Game: Codable {
     let systemRequirments: SystemRequirments?
     let screenshots: [Screenshot]?
     
+    func getPlatformImage() -> UIImage? {
+        if platform == "PC (Windows)" {
+            UIImage(systemName: "desktopcomputer")
+        } else {
+            UIImage(systemName: "safari")
+        }
+    }
+    
     enum CodingKeys: String, CodingKey {
         case shortDescription = "short_description"
         case gameURL = "game_url"
