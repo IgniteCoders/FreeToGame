@@ -7,7 +7,8 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UICollectionViewDataSource {
+    
     
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -15,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var platformImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var game: Game!
 
@@ -23,6 +25,8 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationItem.title = game.title
+        
+        collectionView.dataSource = self
         
         Task {
             game = await GameProvider.getGameById(id: game.id)
@@ -40,8 +44,24 @@ class DetailViewController: UIViewController {
         descriptionLabel.text = game.description
         
         platformImageView.image = game.getPlatformImage()
+        
+        collectionView.reloadData()
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return game.screenshots?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Screenshot Cell", for: indexPath) as! ScreenshotViewCell
+        let screenshot = game.screenshots![indexPath.row]
+        cell.configure(with: screenshot)
+        return cell
+    }
+    
+    @IBAction func toggleDescription(_ sender: Any) {
+        descriptionLabel.numberOfLines = descriptionLabel.numberOfLines == 0 ? 5 : 0
+    }
 
     /*
     // MARK: - Navigation
