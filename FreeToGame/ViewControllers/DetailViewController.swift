@@ -63,6 +63,11 @@ class DetailViewController: UIViewController, UICollectionViewDataSource {
         descriptionLabel.numberOfLines = descriptionLabel.numberOfLines == 0 ? 5 : 0
     }
 
+    @IBAction func openStore(_ sender: Any) {
+        if let url = URL(string: game.gameURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
     /*
     // MARK: - Navigation
 
