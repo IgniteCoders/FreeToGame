@@ -18,6 +18,12 @@ class DetailViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var osLabel: UILabel!
+    @IBOutlet weak var processorLabel: UILabel!
+    @IBOutlet weak var memoryLabel: UILabel!
+    @IBOutlet weak var graphicsLabel: UILabel!
+    @IBOutlet weak var storageLabel: UILabel!
+    
     var game: Game!
 
     override func viewDidLoad() {
@@ -46,6 +52,12 @@ class DetailViewController: UIViewController, UICollectionViewDataSource {
         platformImageView.image = game.getPlatformImage()
         
         collectionView.reloadData()
+        
+        osLabel.text = game.systemRequirments?.os
+        processorLabel.text = game.systemRequirments?.processor
+        memoryLabel.text = game.systemRequirments?.memory
+        graphicsLabel.text = game.systemRequirments?.graphics
+        storageLabel.text = game.systemRequirments?.storage
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
